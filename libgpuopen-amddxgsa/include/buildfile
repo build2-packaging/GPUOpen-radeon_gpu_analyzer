@@ -1,0 +1,27 @@
+intf_libs = # Interface dependencies.
+#import xxxx_libs += libhello%lib{hello}
+
+lib{gpuopen-amddxgsa}: hxx{**} $intf_libs
+
+# Build options.
+#
+out_pfx = [dir_path] $out_root/include/
+src_pfx = [dir_path] $src_root/include/
+
+cxx.poptions =+ "-I$out_pfx" "-I$src_pfx"
+
+# Export options.
+#
+lib{gpuopen-amddxgsa}:
+{
+  cxx.export.poptions = "-I$out_pfx" "-I$src_pfx"
+  cxx.export.libs = $intf_libs
+}
+
+# Install recreating subdirectories.
+#
+hxx{*}:
+{
+  install         = include/
+  install.subdirs = true
+}
