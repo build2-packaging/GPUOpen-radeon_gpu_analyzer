@@ -1,0 +1,9 @@
+- While we could do the git submodule, dragging the whole of
+  radeon_gpu_analyzer for a few rarely-changing headers feels like an
+  overkill. So we just copy them from:
+
+  https://github.com/GPUOpen-Tools/radeon_gpu_analyzer/tree/2.15/external/dx11
+
+  The files are GSA/AmdDxGsaCompile.h and AsicReg/devices.h, plus the
+  upstream LICENSE.txt and README.md at the 2.15 tag
+  (cd9be70b1ff3956405458352da1fa40f565ecaab).
