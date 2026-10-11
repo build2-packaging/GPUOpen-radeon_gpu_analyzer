@@ -1,16 +1,16 @@
 : 1
 name: libgpuopen-amddxgsa
-version: 0.1.0-a.0.z
+version: 2.15.0-a.0.z
 type: lib,binless
 language: c++
-project: build2-radeon_gpu_analyzer
-summary: RGA (Radeon™ GPU Analyzer) #
+project: gpuopen
+summary: AMD Direct3D 11 GSA shader compile extension C++ headers
+topics: amd, gpu, driver, direct3d, shader compiler
 license: MIT ; MIT License.
 description-file: README.md
 package-description-file: PACKAGE-README.md
-url: https://example.org/upstream
-email: upstream@example.org
-package-url: https://github.com/build2-packaging/build2-radeon_gpu_analyzer
+url: https://github.com/GPUOpen-Tools/radeon_gpu_analyzer
+package-url: https://github.com/build2-packaging/GPUOpen-radeon_gpu_analyzer
 package-email: packaging@build2.org ; Mailing list.
 depends: * build2 >= 0.18.0
 depends: * bpkg >= 0.18.0
