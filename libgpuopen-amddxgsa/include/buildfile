@@ -1,7 +1,11 @@
 intf_libs = # Interface dependencies.
 #import xxxx_libs += libhello%lib{hello}
 
-lib{gpuopen-amddxgsa}: hxx{**} $intf_libs
+lib{gpuopen-amddxgsa}: hxx{** -GSA/AmdDxGsaCompile} $intf_libs
+
+# Windows-only (includes <windows.h>).
+#
+lib{gpuopen-amddxgsa}: hxx{GSA/AmdDxGsaCompile}: include = ($cxx.target.class == 'windows')
 
 # Build options.
 #
