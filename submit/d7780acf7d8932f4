@@ -1,0 +1,8 @@
+: 1
+name: libgpuopen-amddxgsa
+version: 2.15.0
+type: lib,binless
+language: c++
+project: gpuopen
+summary: AMD Direct3D 11 GSA shader compile extension C++ headers
+license: MIT; MIT License.
